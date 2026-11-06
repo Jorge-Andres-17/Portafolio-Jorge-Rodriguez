@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jorge Andrés Rodríguez | Desarrollo de software y soporte IT</title>
+  <meta name="description" content="Portafolio de Jorge Andrés Rodríguez Ceballes, estudiante de Ingeniería de Software en Bogotá con experiencia en soporte IT. Proyectos en Python, Java, JavaScript y SQL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio" aria-label="Jorge Rodríguez, inicio">
+        <span class="marca-sigla">JR</span>
+        <span class="marca-texto">Jorge Rodríguez</span>
+      </a>
+
+      <button class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="menuPrincipal">Menú</button>
+
+      <nav class="menu" id="menuPrincipal" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Experiencia</a>
+
+        <div class="desplegable">
+          <button class="desplegable-boton" aria-expanded="false">Más</button>
+          <div class="desplegable-lista">
+            <a href="paginas/proyectos.html">Todos los proyectos</a>
+            <a href="paginas/certificaciones.html">Certificaciones</a>
+            <a href="paginas/blog.html">Notas técnicas</a>
+            <a href="https://github.com/Jorge-Andres-17" target="_blank" rel="noopener">Mi GitHub</a>
+            <a href="assets/HV_Jorge_Rodriguez.pdf" target="_blank" rel="noopener">Hoja de vida (PDF)</a>
+          </div>
+        </div>
+
+        <a class="menu-cta" href="#contacto">Contacto</a>
+      </nav>
+      <button class="tema-boton" id="temaBoton" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icono-sol" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+        <svg class="icono-luna" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="contenedor hero-grid">
+        <div class="hero-texto">
+          <p class="hero-rol">Desarrollo de software y soporte IT</p>
+          <h1>Jorge Andrés Rodríguez Ceballes</h1>
+          <p class="hero-bajada">Estudio Ingeniería de Software en Bogotá. Programo en Python, Java, JavaScript y SQL, y vengo de resolver incidentes de equipos, redes y cuentas en una mesa de ayuda.</p>
+          <div class="hero-acciones">
+            <a class="boton boton-primario" href="#proyectos">Ver proyectos</a>
+            <a class="boton boton-secundario" href="https://github.com/Jorge-Andres-17" target="_blank" rel="noopener">Abrir GitHub</a>
+            <a class="boton boton-secundario" href="assets/HV_Jorge_Rodriguez.pdf" target="_blank" rel="noopener">Hoja de vida</a>
+          </div>
+        </div>
+
+        <figure class="foto">
+          <img src="assets/foto-perfil.jpg" width="1280" height="960" fetchpriority="high" alt="Retrato de perfil de Jorge Andrés bajo una luz verde de neón">
+        </figure>
+      </div>
+
+      <!-- Panel de puertos: cada puerto abre una sección -->
+      <div class="contenedor">
+        <nav class="panel-puertos" aria-label="Accesos rápidos">
+          <span class="panel-titulo">Accesos rápidos</span>
+          <ol class="puertos">
+            <li>
+              <a class="puerto" href="#proyectos" style="--i:0">
+                <span class="led" aria-hidden="true"></span>
+                <span class="puerto-nombre">Proyectos</span>
+              </a>
+            </li>
+            <li>
+              <a class="puerto" href="#sobre-mi" style="--i:1">
+                <span class="led" aria-hidden="true"></span>
+                <span class="puerto-nombre">Sobre mí</span>
+              </a>
+            </li>
+            <li>
+              <a class="puerto" href="#habilidades" style="--i:2">
+                <span class="led" aria-hidden="true"></span>
+                <span class="puerto-nombre">Habilidades</span>
+              </a>
+            </li>
+            <li>
+              <a class="puerto" href="#experiencia" style="--i:3">
+                <span class="led" aria-hidden="true"></span>
+                <span class="puerto-nombre">Experiencia</span>
+              </a>
+            </li>
+            <li>
+              <a class="puerto" href="#formacion" style="--i:4">
+                <span class="led" aria-hidden="true"></span>
+                <span class="puerto-nombre">Formación</span>
+              </a>
+            </li>
+            <li>
+              <a class="puerto" href="#contacto" style="--i:5">
+                <span class="led" aria-hidden="true"></span>
+                <span class="puerto-nombre">Contacto</span>
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="seccion" id="proyectos">
+      <div class="contenedor">
+        <h2>Proyectos</h2>
+        <p class="seccion-intro">Cuatro trabajos que muestran lo que sé hacer: automatizar, calcular, modelar datos y resolver problemas con estructuras.</p>
+
+        <div class="proyectos">
+
+          <article class="proyecto">
+            <div class="placeholder placeholder-proyecto" role="img" aria-label="Captura de la aplicación, pendiente">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="0" y1="0" x2="100" y2="100"/>
+                <line x1="100" y1="0" x2="0" y2="100"/>
+              </svg>
+            </div>
+            <div class="proyecto-cuerpo">
+              <h3>Programación diaria automática</h3>
+              <p>Aplicación de escritorio que elabora y distribuye la programación diaria de un colegio. El trabajo pasó de 2 horas a menos de 10 minutos, cerca de 9 horas semanales liberadas.</p>
+              <ul class="etiquetas">
+                <li>Python</li>
+                <li>CustomTkinter</li>
+                <li>.exe</li>
+              </ul>
+              <div class="proyecto-enlaces">
+                <a class="enlace" href="paginas/proyectos.html">Ver detalle</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto">
+            <div class="placeholder placeholder-proyecto" role="img" aria-label="Captura del simulador, pendiente">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="0" y1="0" x2="100" y2="100"/>
+                <line x1="100" y1="0" x2="0" y2="100"/>
+              </svg>
+            </div>
+            <div class="proyecto-cuerpo">
+              <h3>Simulador de consumo energético</h3>
+              <p>Sitio web con un modelo de cálculo diferencial que decide a qué hora usar la lavadora, la plancha y el microondas. Mover 30,15 kWh al mes a la madrugada ahorra unos $7.272 mensuales.</p>
+              <ul class="etiquetas">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SVG</li>
+              </ul>
+              <div class="proyecto-enlaces">
+                <a class="enlace" href="https://github.com/Jorge-Andres-17/simulador-consumo-energetico" target="_blank" rel="noopener">Ver código en GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto">
+            <div class="placeholder placeholder-proyecto" role="img" aria-label="Diagrama relacional, pendiente">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="0" y1="0" x2="100" y2="100"/>
+                <line x1="100" y1="0" x2="0" y2="100"/>
+              </svg>
+            </div>
+            <div class="proyecto-cuerpo">
+              <h3>SECUDATA, base de datos de una empresa de seguridad</h3>
+              <p>Base de datos relacional con 11 tablas, 15 consultas con JOIN, 5 procedimientos almacenados y 6 vistas para controlar solicitudes de servicio, personal y facturación.</p>
+              <ul class="etiquetas">
+                <li>MySQL</li>
+                <li>Procedimientos</li>
+                <li>Vistas</li>
+                <li>Power BI</li>
+              </ul>
+              <div class="proyecto-enlaces">
+                <a class="enlace" href="paginas/proyectos.html">Ver detalle</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto">
+            <div class="placeholder placeholder-proyecto" role="img" aria-label="Salida del programa, pendiente">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="0" y1="0" x2="100" y2="100"/>
+                <line x1="100" y1="0" x2="0" y2="100"/>
+              </svg>
+            </div>
+            <div class="proyecto-cuerpo">
+              <h3>Estructuras de datos en Java</h3>
+              <p>Un grafo con lista de adyacencia que modela 24 espacios y 29 pasillos de un piso, con recorridos BFS y DFS, y un lector de archivos CSV que calcula promedios y cuenta notas altas.</p>
+              <ul class="etiquetas">
+                <li>Java</li>
+                <li>Grafos</li>
+                <li>BFS y DFS</li>
+                <li>CSV</li>
+              </ul>
+              <div class="proyecto-enlaces">
+                <a class="enlace" href="https://github.com/Jorge-Andres-17/Piso13Grafo" target="_blank" rel="noopener">Ver grafo en GitHub</a>
+                <a class="enlace" href="https://github.com/Jorge-Andres-17/Actividad_CSV" target="_blank" rel="noopener">Ver lector CSV</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="proyectos-pie"><a class="enlace" href="paginas/proyectos.html">Ver todos los proyectos</a></p>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="seccion seccion-alt" id="sobre-mi">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h2>Sobre mí</h2>
+          <p>Estudio Ingeniería de Software y programo a partir de problemas reales. En la mesa de ayuda de un colegio vi qué tareas se repetían y construí una aplicación en Python que convirtió dos horas diarias de trabajo manual en menos de diez minutos.</p>
+          <p>También conozco el problema desde el lado de quien lo sufre. Atendí en sitio y a distancia a docentes, estudiantes y administrativos, registré los casos en Trengo y mantuve en funcionamiento equipos, red y cuentas de usuario.</p>
+          <p>Busco una primera oportunidad como desarrollador junior o en soporte técnico N1 o N2, con espacio para seguir creciendo hacia el desarrollo.</p>
+        </div>
+
+        <div class="cifras" role="group" aria-label="Resultado destacado">
+          <div class="cifra-bloque">
+            <p class="cifra-titulo">Programación diaria del colegio</p>
+            <div class="cifra-comparacion">
+              <div>
+                <span class="cifra-numero">2 h</span>
+                <span class="cifra-nota">antes, a mano</span>
+              </div>
+              <div>
+                <span class="cifra-numero cifra-ok">&lt; 10 min</span>
+                <span class="cifra-nota">con mi aplicación en Python</span>
+              </div>
+            </div>
+            <p class="cifra-pie">Cerca de 9 horas semanales liberadas para el área encargada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="seccion" id="habilidades">
+      <div class="contenedor">
+        <h2>Habilidades</h2>
+        <p class="seccion-intro">Abre cada grupo para ver lo que sé hacer.</p>
+
+        <div class="acordeon-grupo" data-acordeon>
+          <details open>
+            <summary>Desarrollo</summary>
+            <ul>
+              <li>Python: automatización, interfaces de escritorio con CustomTkinter y empaquetado en .exe</li>
+              <li>Java: estructuras de datos, grafos, lectura de archivos (Java Fundamentals, Oracle Academy)</li>
+              <li>HTML, CSS y JavaScript nivel intermedio</li>
+              <li>Git y GitHub</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Bases de datos</summary>
+            <ul>
+              <li>SQL nivel intermedio con MySQL</li>
+              <li>Diseño relacional, claves foráneas y columnas calculadas</li>
+              <li>Consultas con JOIN, procedimientos almacenados y vistas</li>
+              <li>Tableros en Power BI</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Soporte y mesa de ayuda</summary>
+            <ul>
+              <li>Help Desk / Service Desk N1 y N2</li>
+              <li>Gestión de incidentes y requerimientos con tickets (Trengo)</li>
+              <li>Soporte presencial y remoto a usuarios finales</li>
+              <li>Diagnóstico de fallas de hardware y software, y mantenimiento de equipos</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Redes y sistemas operativos</summary>
+            <ul>
+              <li>Configuración de switches desde cero, VLANs y direccionamiento IP (TCP/IP)</li>
+              <li>Instalación de Windows 10/11 y Linux, y despliegue de imágenes para instalaciones masivas</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Active Directory y Microsoft 365</summary>
+            <ul>
+              <li>Creación y baja de cuentas, grupos, permisos y restablecimiento de contraseñas</li>
+              <li>Centro de administración de Microsoft 365</li>
+              <li>Outlook, Teams, OneDrive y Word; Excel nivel intermedio</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="seccion seccion-alt" id="experiencia">
+      <div class="contenedor">
+        <h2>Experiencia</h2>
+
+        <ol class="linea-tiempo">
+          <li class="hito">
+            <div class="hito-fecha">Feb 2026 – Ago 2026</div>
+            <div class="hito-cuerpo">
+              <h3>Practicante IT, soporte técnico y sistemas</h3>
+              <p class="hito-lugar">Colegio San Jorge de Inglaterra, Bogotá</p>
+              <details open>
+                <summary>Ver lo que hice</summary>
+                <ul>
+                  <li>Automaticé con Python la programación diaria del colegio: de 2 horas a menos de 10 minutos.</li>
+                  <li>Soporte N1 y N2, presencial y remoto, para docentes, estudiantes y personal administrativo, con tickets en Trengo.</li>
+                  <li>Instalé Windows 10/11 y Linux desde cero y desplegué imágenes en instalaciones masivas.</li>
+                  <li>Configuré switches desde cero: VLANs, puertos y direccionamiento IP para ampliar la conectividad de aulas y oficinas.</li>
+                  <li>Administré usuarios, grupos y permisos en Active Directory.</li>
+                  <li>Resolví incidencias de Outlook, Teams y OneDrive desde el centro de administración de Microsoft 365.</li>
+                  <li>Reparé portátiles y di mantenimiento preventivo y correctivo al parque de equipos.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="hito">
+            <div class="hito-fecha">Feb 2026 – actualidad</div>
+            <div class="hito-cuerpo">
+              <h3>Apoyo por proyectos, prestación de servicios</h3>
+              <p class="hito-lugar">Ares Security Ltda., Bogotá</p>
+              <details>
+                <summary>Ver lo que hago</summary>
+                <ul>
+                  <li>Apoyo puntual en la recolección de información documental según el proyecto asignado.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="hito">
+            <div class="hito-fecha">Feb 2025 – Feb 2026</div>
+            <div class="hito-cuerpo">
+              <h3>Analista de credibilidad</h3>
+              <p class="hito-lugar">Ares Security Ltda., Bogotá</p>
+              <details>
+                <summary>Ver lo que hice</summary>
+                <ul>
+                  <li>Verifiqué información laboral y académica de candidatos por teléfono y correo.</li>
+                  <li>Atendí a clientes, resolví sus dudas y pedí información adicional cuando hacía falta.</li>
+                  <li>Revisé y digité en promedio 9 procesos documentales al día antes de registrarlos en los sistemas internos.</li>
+                  <li>Detecté inconsistencias en documentos y los devolví al área correspondiente antes de que avanzaran.</li>
+                  <li>Respondí a las áreas internas sobre el estado y la trazabilidad de la información.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FORMACIÓN Y CERTIFICACIONES -->
+    <section class="seccion" id="formacion">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h2>Formación</h2>
+          <div class="ficha">
+            <h3>Ingeniería de Software, 5.º semestre</h3>
+            <p>Fundación Universitaria Compensar, Bogotá. 2024 – actualidad.</p>
+            <p>Programa por ciclos propedéuticos: ciclo técnico profesional culminado, pendiente de grado.</p>
+          </div>
+          <div class="ficha">
+            <h3>Bachiller técnico en Comunicación y Diseño</h3>
+            <p>IED Colegio 21 Ángeles, Bogotá. 2023.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Certificaciones e idiomas</h2>
+          <div class="ficha">
+            <h3>Java Fundamentals</h3>
+            <p>Oracle Academy. Examen final aprobado el 13 de noviembre de 2024.</p>
+            <a class="enlace" href="assets/certificado-java-fundamentals-oracle.pdf" target="_blank" rel="noopener">Ver certificado</a>
+          </div>
+          <div class="ficha">
+            <h3>Español e inglés</h3>
+            <p>Español nativo. Inglés básico: comprendo lo que escucho y mi expresión oral está en desarrollo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion contacto" id="contacto">
+      <div class="contenedor">
+        <h2>¿Tienes una vacante o un proyecto?</h2>
+        <p class="contacto-texto">Escríbeme y te respondo. Estoy en Bogotá y busco una primera oportunidad en desarrollo o soporte técnico.</p>
+        <div class="contacto-botones">
+          <a class="boton boton-primario" href="mailto:jorgeandresrodriguez1721@gmail.com">Enviar correo</a>
+          <a class="boton boton-linea" href="https://wa.me/573238041219" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="boton boton-linea" href="https://github.com/Jorge-Andres-17" target="_blank" rel="noopener">Abrir GitHub</a>
+          <a class="boton boton-linea" href="https://www.linkedin.com/in/jorge-andres-rodriguez-ceballes-a00019436" target="_blank" rel="noopener">Abrir LinkedIn</a>
+        </div>
+        <p class="contacto-dato">Correo: <a href="mailto:jorgeandresrodriguez1721@gmail.com">jorgeandresrodriguez1721@gmail.com</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-barra">
+      <p>Jorge Andrés Rodríguez Ceballes, Bogotá, Colombia</p>
+      <a href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
