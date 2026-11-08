@@ -1227,3 +1227,149 @@ details li {
     aspect-ratio: 16 / 7;
   }
 }
+
+/* ------------------------------------==========================================================
+   HABILIDADES ESFERA EN 3D
+   ---------------------------------------======================= */
+.cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cat {
+  min-height: 44px;
+  padding: .5rem 1rem;
+  background: var(--papel);
+  color: var(--tinta);
+  border: 1px solid var(--linea-fuerte);
+  border-radius: 8px;
+  font: inherit;
+  font-size: .98rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.cat:hover {
+  border-color: var(--senal);
+  color: var(--senal);
+}
+
+.cat[aria-pressed="true"] {
+  background: var(--senal);
+  color: var(--senal-tinta);
+  border-color: var(--senal);
+  font-weight: 600;
+}
+
+.esfera-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.esfera-app:not(.con-js) .escena {
+  display: none;
+}
+
+.escena {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, rgba(var(--senal-rgb), .1), transparent 62%);
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.escena:active {
+  cursor: grabbing;
+}
+
+.anillo {
+  position: absolute;
+  inset: 11%;
+  border: 1px solid var(--linea-fuerte);
+  border-radius: 50%;
+  opacity: .7;
+  pointer-events: none;
+}
+
+.anillo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 28%;
+  transform: translateY(-50%);
+  border: 2px solid rgba(var(--senal-rgb), .55);
+  border-radius: 50%;
+}
+
+.palabra {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--tinta);
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: color .2s;
+}
+
+.palabra.frente {
+  color: var(--senal);
+  font-weight: 600;
+}
+
+.ayuda {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .7rem;
+  color: var(--tinta-suave);
+  font-size: .85rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.ficha-hab {
+  padding: 1.5rem;
+  background: var(--papel);
+  border: 1px solid var(--linea-fuerte);
+  border-radius: var(--radio);
+}
+
+.ficha-hab[hidden] {
+  display: none;
+}
+
+.esfera-app:not(.con-js) .ficha-hab {
+  margin-top: 1rem;
+}
+
+.ficha-hab h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.ficha-hab .etiquetas {
+  margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  .esfera-grid {
+    grid-template-columns: 1fr;
+  }
+}

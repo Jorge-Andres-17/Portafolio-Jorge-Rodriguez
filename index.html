@@ -266,58 +266,95 @@
     </section>
 
     <!-- HABILIDADES -->
-    <section class="seccion" id="habilidades">
+         <section class="seccion" id="habilidades">
       <div class="contenedor">
         <h2>Habilidades</h2>
-        <p class="seccion-intro">Abre cada grupo para ver lo que sé hacer.</p>
+        <p class="seccion-intro">Elige una categoría y gira la esfera para explorar.</p>
 
-        <div class="acordeon-grupo" data-acordeon>
-          <details open>
-            <summary>Desarrollo</summary>
-            <ul>
-              <li>Python: automatización, interfaces de escritorio con CustomTkinter y empaquetado en .exe</li>
-              <li>Java: estructuras de datos, grafos, lectura de archivos (Java Fundamentals, Oracle Academy)</li>
-              <li>HTML, CSS y JavaScript nivel intermedio</li>
-              <li>Git y GitHub</li>
-            </ul>
-          </details>
+        <div class="esfera-app" data-esfera>
+          <div class="cats" data-cats role="group" aria-label="Categorías de habilidades"></div>
 
-          <details>
-            <summary>Bases de datos</summary>
-            <ul>
-              <li>SQL nivel intermedio con MySQL</li>
-              <li>Diseño relacional, claves foráneas y columnas calculadas</li>
-              <li>Consultas con JOIN, procedimientos almacenados y vistas</li>
-              <li>Tableros en Power BI</li>
-            </ul>
-          </details>
+          <div class="esfera-grid">
+            <div class="escena" data-escena aria-hidden="true">
+              <div class="anillo"></div>
+              <div class="ayuda">Arrastra para girar</div>
+            </div>
 
-          <details>
-            <summary>Soporte y mesa de ayuda</summary>
-            <ul>
-              <li>Help Desk / Service Desk N1 y N2</li>
-              <li>Gestión de incidentes y requerimientos con tickets (Trengo)</li>
-              <li>Soporte presencial y remoto a usuarios finales</li>
-              <li>Diagnóstico de fallas de hardware y software, y mantenimiento de equipos</li>
-            </ul>
-          </details>
+            <div class="grupos">
+              <section class="ficha-hab" data-grupo="Desarrollo">
+                <h3>Desarrollo</h3>
+                <ul class="etiquetas">
+                  <li>Python</li>
+                  <li>CustomTkinter</li>
+                  <li>Java</li>
+                  <li>Angular</li>
+                  <li>Grafos</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>Empaquetado .exe</li>
+                </ul>
+              </section>
 
-          <details>
-            <summary>Redes y sistemas operativos</summary>
-            <ul>
-              <li>Configuración de switches desde cero, VLANs y direccionamiento IP (TCP/IP)</li>
-              <li>Instalación de Windows 10/11 y Linux, y despliegue de imágenes para instalaciones masivas</li>
-            </ul>
-          </details>
+              <section class="ficha-hab" data-grupo="Bases de datos">
+                <h3>Bases de datos</h3>
+                <ul class="etiquetas">
+                  <li>SQL</li>
+                  <li>MySQL</li>
+                  <li>JOIN</li>
+                  <li>Procedimientos</li>
+                  <li>Vistas</li>
+                  <li>Claves foráneas</li>
+                  <li>Diseño relacional</li>
+                  <li>Power BI</li>
+                </ul>
+              </section>
 
-          <details>
-            <summary>Active Directory y Microsoft 365</summary>
-            <ul>
-              <li>Creación y baja de cuentas, grupos, permisos y restablecimiento de contraseñas</li>
-              <li>Centro de administración de Microsoft 365</li>
-              <li>Outlook, Teams, OneDrive y Word; Excel nivel intermedio</li>
-            </ul>
-          </details>
+              <section class="ficha-hab" data-grupo="Soporte y mesa de ayuda">
+                <h3>Soporte y mesa de ayuda</h3>
+                <ul class="etiquetas">
+                  <li>Help Desk N1</li>
+                  <li>Help Desk N2</li>
+                  <li>Tickets</li>
+                  <li>Trengo</li>
+                  <li>Soporte remoto</li>
+                  <li>Soporte presencial</li>
+                  <li>Diagnóstico</li>
+                  <li>Mantenimiento</li>
+                </ul>
+              </section>
+
+              <section class="ficha-hab" data-grupo="Redes y sistemas operativos">
+                <h3>Redes y sistemas operativos</h3>
+                <ul class="etiquetas">
+                  <li>Switches</li>
+                  <li>VLANs</li>
+                  <li>TCP/IP</li>
+                  <li>Direccionamiento IP</li>
+                  <li>Windows 10/11</li>
+                  <li>Linux</li>
+                  <li>Imágenes de despliegue</li>
+                </ul>
+              </section>
+
+              <section class="ficha-hab" data-grupo="Active Directory y Microsoft 365">
+                <h3>Active Directory y Microsoft 365</h3>
+                <ul class="etiquetas">
+                  <li>Active Directory</li>
+                  <li>Grupos</li>
+                  <li>Permisos</li>
+                  <li>Contraseñas</li>
+                  <li>Microsoft 365</li>
+                  <li>Outlook</li>
+                  <li>Teams</li>
+                  <li>OneDrive</li>
+                  <li>Excel</li>
+                </ul>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -439,5 +476,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/esfera.js"></script>
 </body>
 </html>
