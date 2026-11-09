@@ -91,4 +91,57 @@
       }
     });
   }
+    // ---------- Copiar correo ----------
+    var copiar = document.getElementById('copiarCorreo');
+    var aviso = document.getElementById('avisoCopia');
+
+    if (copiar) {
+      var textoOriginal = copiar.textContent;
+      var reloj;
+
+      function avisar(mensaje) {
+        copiar.textContent = mensaje === 'ok' ? '¡Correo copiado!' : textoOriginal;
+        if (aviso) {
+          aviso.textContent = mensaje === 'ok'
+            ? 'Correo copiado al portapapeles. Ya puedes pegarlo en tu aplicación de correo.'
+            : 'No se pudo copiar automáticamente. Escríbeme por WhatsApp o desde el botón Enviar correo.';
+        }
+        clearTimeout(reloj);
+        reloj = setTimeout(function () {
+          copiar.textContent = textoOriginal;
+          if (aviso) aviso.textContent = '';
+        }, 3000);
+      }
+
+      function copiarAlterno(texto) {
+        var campo = document.createElement('textarea');
+        campo.value = texto;
+        campo.setAttribute('readonly', '');
+        campo.style.position = 'fixed';
+        campo.style.opacity = '0';
+        document.body.appendChild(campo);
+        campo.select();
+        var hecho = false;
+        try { hecho = document.execCommand('copy'); } catch (e) {}
+        campo.remove();
+        return hecho;
+      }
+
+      copiar.addEventListener('click', function () {
+        var correo = copiar.getAttribute('data-correo');
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(correo).then(
+            function () { avisar('ok'); },
+            function () { avisar(copiarAlterno(correo) ? 'ok' : 'error'); }
+          );
+        } else {
+          avisar(copiarAlterno(correo) ? 'ok' : 'error');
+        }
+      });
+    }
+
+    // ---------- Año del pie de página ----------
+    var anio = document.getElementById('anio');
+    if (anio) anio.textContent = new Date().getFullYear();
+
 })();

@@ -1372,4 +1372,18 @@ details li {
   .esfera-grid {
     grid-template-columns: 1fr;
   }
+} 
+
+/* Botón de copiar correo */
+button.boton-linea {
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contacto-dato {
+  min-height: 1.65em;
+  color: var(--senal);
+  font-weight: 500;
 }
