@@ -2,104 +2,104 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Todos los proyectos | Jorge Rodríguez</title>
+  <meta name="description" content="Proyectos de Jorge Andrés Rodríguez Ceballes: automatización en Python, simulador de consumo energético, base de datos SECUDATA y estructuras de datos en Java.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1E15'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%233DFF72' stroke-width='3'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%233DFF72'%3EJR%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="../js/tema.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
   <header class="cabecera">
     <div class="contenedor barra">
-      <a class="marca" href="../index.html">
+      <a class="marca" href="../index.html" aria-label="Jorge Rodríguez, inicio">
         <span class="marca-sigla">JR</span>
         <span class="marca-texto">Jorge Rodríguez</span>
       </a>
-      <a class="boton boton-secundario" href="../index.html">Volver al inicio</a>
+
+      <div class="barra-acciones">
+        <a class="boton boton-secundario" href="../index.html">Volver al inicio</a>
+        <button class="tema-boton" id="temaBoton" type="button" aria-label="Cambiar a modo claro">
+          <svg class="icono-sol" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+          <svg class="icono-luna" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <main class="seccion">
     <div class="contenedor">
       <h1>Todos los proyectos</h1>
-      <p class="seccion-intro">Boceto (wireframe): cuadrícula de proyectos con filtro por tecnología.</p>
+      <p class="seccion-intro">Los trabajos que muestran lo que sé hacer: automatizar, calcular, modelar datos y resolver problemas con estructuras.</p>
 
       <div class="proyectos">
 
-        <article class="proyecto">
-          <div class="placeholder placeholder-proyecto">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <line x1="0" y1="0" x2="100" y2="100"/>
-              <line x1="100" y1="0" x2="0" y2="100"/>
-            </svg>
-          </div>
+        <article class="proyecto" id="programacion-diaria">
           <div class="proyecto-cuerpo">
-            <h3>Título</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="proyecto-titulo">Programación diaria automática</h2>
+            <p>Aplicación de escritorio que elabora y distribuye la programación diaria de un colegio. El trabajo pasó de 2 horas a menos de 10 minutos, cerca de 9 horas semanales liberadas.</p>
+            <ul class="etiquetas">
+              <li>Python</li>
+              <li>CustomTkinter</li>
+              <li>.exe</li>
+            </ul>
           </div>
         </article>
 
-        <article class="proyecto">
-          <div class="placeholder placeholder-proyecto">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <line x1="0" y1="0" x2="100" y2="100"/>
-              <line x1="100" y1="0" x2="0" y2="100"/>
-            </svg>
-          </div>
+        <article class="proyecto" id="simulador">
           <div class="proyecto-cuerpo">
-            <h3>Título</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="proyecto-titulo">Simulador de consumo energético</h2>
+            <p>Sitio web con un modelo de cálculo diferencial que decide a qué hora usar la lavadora, la plancha y el microondas. Mover 30,15 kWh al mes a la madrugada ahorra unos $7.272 mensuales.</p>
+            <ul class="etiquetas">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>SVG</li>
+            </ul>
+            <div class="proyecto-enlaces">
+              <a class="enlace" href="https://github.com/Jorge-Andres-17/simulador-consumo-energetico" target="_blank" rel="noopener">Ver código en GitHub</a>
+            </div>
           </div>
         </article>
 
-        <article class="proyecto">
-          <div class="placeholder placeholder-proyecto">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <line x1="0" y1="0" x2="100" y2="100"/>
-              <line x1="100" y1="0" x2="0" y2="100"/>
-            </svg>
-          </div>
+        <article class="proyecto" id="secudata">
           <div class="proyecto-cuerpo">
-            <h3>Título</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="proyecto-titulo">SECUDATA, base de datos de una empresa de seguridad</h2>
+            <p>Base de datos relacional con 11 tablas, 15 consultas con JOIN, 5 procedimientos almacenados y 6 vistas para controlar solicitudes de servicio, personal y facturación.</p>
+            <ul class="etiquetas">
+              <li>MySQL</li>
+              <li>Procedimientos</li>
+              <li>Vistas</li>
+              <li>Power BI</li>
+            </ul>
           </div>
         </article>
 
-        <article class="proyecto">
-          <div class="placeholder placeholder-proyecto">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <line x1="0" y1="0" x2="100" y2="100"/>
-              <line x1="100" y1="0" x2="0" y2="100"/>
-            </svg>
-          </div>
+        <article class="proyecto" id="estructuras-java">
           <div class="proyecto-cuerpo">
-            <h3>Título</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </article>
-
-        <article class="proyecto">
-          <div class="placeholder placeholder-proyecto">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <line x1="0" y1="0" x2="100" y2="100"/>
-              <line x1="100" y1="0" x2="0" y2="100"/>
-            </svg>
-          </div>
-          <div class="proyecto-cuerpo">
-            <h3>Título</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </article>
-
-        <article class="proyecto">
-          <div class="placeholder placeholder-proyecto">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <line x1="0" y1="0" x2="100" y2="100"/>
-              <line x1="100" y1="0" x2="0" y2="100"/>
-            </svg>
-          </div>
-          <div class="proyecto-cuerpo">
-            <h3>Título</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="proyecto-titulo">Estructuras de datos en Java</h2>
+            <p>Un grafo con lista de adyacencia que modela 24 espacios y 29 pasillos de un piso, con recorridos BFS y DFS, y un lector de archivos CSV que calcula promedios y cuenta notas altas.</p>
+            <ul class="etiquetas">
+              <li>Java</li>
+              <li>Grafos</li>
+              <li>BFS y DFS</li>
+              <li>CSV</li>
+            </ul>
+            <div class="proyecto-enlaces">
+              <a class="enlace" href="https://github.com/Jorge-Andres-17/Piso13Grafo" target="_blank" rel="noopener">Ver grafo en GitHub</a>
+              <a class="enlace" href="https://github.com/Jorge-Andres-17/Actividad_CSV" target="_blank" rel="noopener">Ver lector CSV</a>
+            </div>
           </div>
         </article>
 
@@ -109,10 +109,11 @@
 
   <footer class="pie">
     <div class="contenedor pie-barra">
-      <p>Jorge Andrés Rodríguez Ceballes, Bogotá, Colombia</p>
+      <p>© <span id="anio">2026</span> Jorge Andrés Rodríguez Ceballes. Todos los derechos reservados. Bogotá, Colombia.</p>
       <a href="../index.html">Volver al inicio</a>
     </div>
   </footer>
 
+  <script src="../js/main.js"></script>
 </body>
 </html>

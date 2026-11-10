@@ -144,4 +144,29 @@
     var anio = document.getElementById('anio');
     if (anio) anio.textContent = new Date().getFullYear();
 
+      // ---------- Visor de certificados ----------
+  var visor = document.getElementById('visor');
+  var ultimoBoton = null;
+
+  document.querySelectorAll('[data-cert]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var pdf = b.getAttribute('data-pdf');
+      if (!visor || !visor.showModal) { window.open(pdf, '_blank', 'noopener'); return; }
+
+      ultimoBoton = b;
+      var img = document.getElementById('visorImg');
+      img.src = b.getAttribute('data-img');
+      img.alt = b.querySelector('img').alt;
+      document.getElementById('visorTitulo').textContent = b.getAttribute('data-titulo');
+      document.getElementById('visorPdf').href = pdf;
+      visor.showModal();
+    });
+  });
+
+  if (visor) {
+    visor.querySelector('[data-cerrar]').addEventListener('click', function () { visor.close(); });
+    visor.addEventListener('click', function (e) { if (e.target === visor) visor.close(); });
+    visor.addEventListener('close', function () { if (ultimoBoton) ultimoBoton.focus(); });
+  }
+
 })();

@@ -1386,4 +1386,145 @@ button.boton-linea {
   min-height: 1.65em;
   color: var(--senal);
   font-weight: 500;
+} 
+
+/* ==========================================================
+   CERTIFICACIONES
+   ========================================================== */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.cert h3 {
+  margin: .9rem 0 .3rem;
+  font-size: 1.1rem;
+}
+
+.cert p {
+  margin-bottom: .6rem;
+  color: var(--tinta-suave);
+  font-size: .95rem;
+}
+
+.cert-vista {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  border: 1px solid var(--linea-fuerte);
+  border-radius: var(--radio);
+  cursor: zoom-in;
+  transition: transform .25s, box-shadow .25s, border-color .2s;
+}
+
+.cert-vista img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: calc(var(--radio) - 1px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cert-vista:hover,
+  .cert-vista:focus-visible {
+    z-index: 5;
+    transform: scale(1.4);
+    border-color: var(--senal);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-vista {
+    transition: none;
+  }
+}
+
+.cert-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.4rem;
+}
+
+/* Visor ampliado */
+.visor {
+  width: min(96vw, 1100px);
+  max-height: 94dvh;
+  padding: 1rem;
+  background: var(--papel);
+  color: var(--tinta);
+  border: 1px solid var(--linea-fuerte);
+  border-radius: 14px;
+}
+
+.visor::backdrop {
+  background: rgba(0, 0, 0, .78);
+}
+
+.visor img {
+  display: block;
+  width: 100%;
+  max-height: 76dvh;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.visor-pie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  margin-top: .8rem;
+}
+
+.visor-pie p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.visor-cerrar {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  background: var(--papel);
+  color: var(--tinta);
+  border: 1px solid var(--linea-fuerte);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.visor-cerrar:hover {
+  border-color: var(--senal);
+  color: var(--senal);
+}
+
+/* ==========================================================
+   PÁGINAS INTERNAS
+   ========================================================== */
+.barra-acciones {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.proyecto-titulo {
+  margin-bottom: .5em;
+  font-size: 1.2rem;
+  letter-spacing: -0.005em;
+}
+
+.proyecto:target {
+  border-color: var(--senal);
 }
