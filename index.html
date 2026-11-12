@@ -137,17 +137,17 @@
     <section class="seccion" id="proyectos">
       <div class="contenedor">
         <h2>Proyectos</h2>
-        <p class="seccion-intro">Cuatro trabajos que muestran lo que sé hacer: automatizar, calcular, modelar datos y resolver problemas con estructuras.</p>
+        <p class="seccion-intro">Cuatro trabajos que muestran lo que sé hacer: automatizar, calcular, modelar datos, resolver problemas con estructuras y construir interfaces en equipo.</p>
 
         <div class="proyectos">
 
           <article class="proyecto">
-            <div class="placeholder placeholder-proyecto" role="img" aria-label="Captura de la aplicación, pendiente">
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <line x1="0" y1="0" x2="100" y2="100"/>
-                <line x1="100" y1="0" x2="0" y2="100"/>
-              </svg>
-            </div>
+            <button class="proyecto-vista" type="button" data-cert
+                    data-img="assets/proyecto-programacion-diaria.png"
+                    data-titulo="Programación diaria automática"
+                    aria-label="Ampliar captura de Programación diaria automática">
+              <img src="assets/proyecto-programacion-diaria.png" loading="lazy" alt="Captura de la aplicación de programación diaria">
+            </button>
             <div class="proyecto-cuerpo">
               <h3>Programación diaria automática</h3>
               <p>Aplicación de escritorio que elabora y distribuye la programación diaria de un colegio. El trabajo pasó de 2 horas a menos de 10 minutos, cerca de 9 horas semanales liberadas.</p>
@@ -163,12 +163,35 @@
           </article>
 
           <article class="proyecto">
-            <div class="placeholder placeholder-proyecto" role="img" aria-label="Captura del simulador, pendiente">
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <line x1="0" y1="0" x2="100" y2="100"/>
-                <line x1="100" y1="0" x2="0" y2="100"/>
-              </svg>
+            <button class="proyecto-vista" type="button" data-cert
+                    data-img="assets/proyecto-carrito-decanters.png"
+                    data-titulo="Colombian Decanters: carrito de compras"
+                    aria-label="Ampliar captura del carrito de compras de Colombian Decanters">
+              <img src="assets/proyecto-carrito-decanters.png" loading="lazy" alt="Captura de la página del carrito con las tarjetas de producto y el resumen de compra">
+            </button>
+            <div class="proyecto-cuerpo">
+              <h3>Colombian Decanters: carrito de compras</h3>
+              <p>Módulo de carrito para una tienda web de licores, desarrollado en equipo con Git y GitHub. Recalcula cantidades, subtotales y total, muestra el progreso hacia el envío gratis y conserva el carrito al recargar la página.</p>
+              <ul class="etiquetas">
+                <li>Angular 21</li>
+                <li>TypeScript</li>
+                <li>Signals</li>
+                <li>Bootstrap 5</li>
+              </ul>
+              <div class="proyecto-enlaces">
+                <a class="enlace" href="paginas/proyectos.html#carrito">Ver detalle</a>
+                <a class="enlace" href="https://github.com/juandavidrodriguezlinaresGH/colombian-decanters" target="_blank" rel="noopener">Ver repositorio del equipo</a>
+              </div>
             </div>
+          </article>
+
+          <article class="proyecto">
+            <button class="proyecto-vista" type="button" data-cert
+                    data-img="assets/proyecto-simulador-energia.png"
+                    data-titulo="Simulador de consumo energético"
+                    aria-label="Ampliar captura del simulador de consumo energético">
+              <img src="assets/proyecto-simulador-energia.png" loading="lazy" alt="Captura del simulador de consumo energético con el cálculo de ahorro mensual">
+            </button>
             <div class="proyecto-cuerpo">
               <h3>Simulador de consumo energético</h3>
               <p>Sitio web con un modelo de cálculo diferencial que decide a qué hora usar la lavadora, la plancha y el microondas. Mover 30,15 kWh al mes a la madrugada ahorra unos $7.272 mensuales.</p>
@@ -185,12 +208,12 @@
           </article>
 
           <article class="proyecto">
-            <div class="placeholder placeholder-proyecto" role="img" aria-label="Diagrama relacional, pendiente">
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <line x1="0" y1="0" x2="100" y2="100"/>
-                <line x1="100" y1="0" x2="0" y2="100"/>
-              </svg>
-            </div>
+            <button class="proyecto-vista proyecto-vista-diagrama" type="button" data-cert
+                    data-img="assets/proyecto-secudata-diagrama.png"
+                    data-titulo="SECUDATA: diagrama relacional"
+                    aria-label="Ampliar diagrama relacional de SECUDATA">
+              <img src="assets/proyecto-secudata-diagrama.png" loading="lazy" alt="Diagrama relacional de SECUDATA con sus 11 tablas y las relaciones entre ellas">
+            </button>
             <div class="proyecto-cuerpo">
               <h3>SECUDATA, base de datos de una empresa de seguridad</h3>
               <p>Base de datos relacional con 11 tablas, 15 consultas con JOIN, 5 procedimientos almacenados y 6 vistas para controlar solicitudes de servicio, personal y facturación.</p>
@@ -202,29 +225,6 @@
               </ul>
               <div class="proyecto-enlaces">
                 <a class="enlace" href="paginas/proyectos.html#secudata">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="proyecto">
-            <div class="placeholder placeholder-proyecto" role="img" aria-label="Salida del programa, pendiente">
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <line x1="0" y1="0" x2="100" y2="100"/>
-                <line x1="100" y1="0" x2="0" y2="100"/>
-              </svg>
-            </div>
-            <div class="proyecto-cuerpo">
-              <h3>Estructuras de datos en Java</h3>
-              <p>Un grafo con lista de adyacencia que modela 24 espacios y 29 pasillos de un piso, con recorridos BFS y DFS, y un lector de archivos CSV que calcula promedios y cuenta notas altas.</p>
-              <ul class="etiquetas">
-                <li>Java</li>
-                <li>Grafos</li>
-                <li>BFS y DFS</li>
-                <li>CSV</li>
-              </ul>
-              <div class="proyecto-enlaces">
-                <a class="enlace" href="https://github.com/Jorge-Andres-17/Piso13Grafo" target="_blank" rel="noopener">Ver grafo en GitHub</a>
-                <a class="enlace" href="https://github.com/Jorge-Andres-17/Actividad_CSV" target="_blank" rel="noopener">Ver lector CSV</a>
               </div>
             </div>
           </article>
@@ -470,6 +470,15 @@
       <a href="#inicio">Volver arriba</a>
     </div>
   </footer>
+
+  <dialog class="visor" id="visor" aria-label="Vista ampliada">
+    <button class="visor-cerrar" type="button" data-cerrar aria-label="Cerrar">✕</button>
+    <img id="visorImg" alt="">
+    <div class="visor-pie">
+      <p id="visorTitulo"></p>
+      <a class="enlace" id="visorPdf" href="#" target="_blank" rel="noopener">Abrir PDF original</a>
+    </div>
+  </dialog>
 
   <script src="js/main.js"></script>
   <script src="js/esfera.js"></script>

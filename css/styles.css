@@ -1510,9 +1510,9 @@ button.boton-linea {
   color: var(--senal);
 }
 
-/* ==========================================================
+/* ---------------------------====================================
    PÁGINAS INTERNAS
-   ========================================================== */
+   --------------------======================================= */
 .barra-acciones {
   display: flex;
   align-items: center;
@@ -1527,4 +1527,81 @@ button.boton-linea {
 
 .proyecto:target {
   border-color: var(--senal);
+} 
+
+/* ==========================================================
+   CAPTURAS DE PROYECTOS CON VISTA AMPLIADA
+   ========================================================== */
+.proyecto-vista {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: var(--fondo-alt);
+  border: 0;
+  border-bottom: 2px solid var(--linea);
+  cursor: zoom-in;
+}
+
+.proyecto-vista img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: top;
+  transition: transform .35s;
+}
+
+.proyecto-vista::after {
+  content: "Ampliar";
+  position: absolute;
+  right: .7rem;
+  bottom: .7rem;
+  padding: .25rem .7rem;
+  background: var(--papel);
+  color: var(--senal);
+  border: 1px solid var(--linea-fuerte);
+  border-radius: 6px;
+  font-size: .85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.proyecto-vista:focus-visible {
+  outline-offset: -4px;
+}
+
+.proyecto-vista:focus-visible::after {
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .proyecto-vista:hover img {
+    transform: scale(1.06);
+  }
+
+  .proyecto-vista:hover::after {
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .proyecto-vista::after {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proyecto-vista img {
+    transition: none;
+  }
+}
+
+/* Diagramas: se muestran completos, sin recortar */
+.proyecto-vista-diagrama img {
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
 }

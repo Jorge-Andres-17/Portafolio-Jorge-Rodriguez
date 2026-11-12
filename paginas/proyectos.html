@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Todos los proyectos | Jorge Rodríguez</title>
-  <meta name="description" content="Proyectos de Jorge Andrés Rodríguez Ceballes: automatización en Python, simulador de consumo energético, base de datos SECUDATA y estructuras de datos en Java.">
+  <meta name="description" content="Proyectos de Jorge Andrés Rodríguez Ceballes: automatización en Python, carrito de compras en Angular, simulador de consumo energético, base de datos SECUDATA y estructuras de datos en Java.">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1E15'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%233DFF72' stroke-width='3'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%233DFF72'%3EJR%3C/text%3E%3C/svg%3E">
 
@@ -41,23 +41,78 @@
   <main class="seccion">
     <div class="contenedor">
       <h1>Todos los proyectos</h1>
-      <p class="seccion-intro">Los trabajos que muestran lo que sé hacer: automatizar, calcular, modelar datos y resolver problemas con estructuras.</p>
+      <p class="seccion-intro">Los trabajos que muestran lo que sé hacer: automatizar, construir interfaces en equipo, calcular, modelar datos y resolver problemas con estructuras.</p>
 
       <div class="proyectos">
 
-        <article class="proyecto" id="programacion-diaria">
+                <article class="proyecto" id="programacion-diaria">
+          <button class="proyecto-vista" type="button" data-cert
+                  data-img="../assets/proyecto-programacion-diaria.png"
+                  data-titulo="Programación diaria automática"
+                  aria-label="Ampliar captura de Programación diaria automática">
+            <img src="../assets/proyecto-programacion-diaria.png" loading="lazy" alt="Captura de la aplicación de programación diaria">
+          </button>
           <div class="proyecto-cuerpo">
             <h2 class="proyecto-titulo">Programación diaria automática</h2>
             <p>Aplicación de escritorio que elabora y distribuye la programación diaria de un colegio. El trabajo pasó de 2 horas a menos de 10 minutos, cerca de 9 horas semanales liberadas.</p>
+            <p><strong>Cómo funciona</strong></p>
+            <ul class="lista-detalle">
+              <li>Desde la interfaz hecha con CustomTkinter se selecciona la última base de datos descargada desde Telegram.</li>
+              <li>La aplicación reconoce el archivo correcto por la fecha y por AM o PM: AM es la base de la mañana.</li>
+              <li>Toma ese Excel, que trae toda la información, y empieza a relacionar los datos.</li>
+              <li>Crea de forma automática dos archivos nuevos en otras carpetas de OneDrive.</li>
+              <li>Esos archivos se envían al área de transporte y a las demás áreas que los necesitan.</li>
+            </ul>
             <ul class="etiquetas">
               <li>Python</li>
               <li>CustomTkinter</li>
+              <li>Excel</li>
+              <li>OneDrive</li>
               <li>.exe</li>
             </ul>
           </div>
         </article>
 
+        <article class="proyecto" id="carrito">
+          <button class="proyecto-vista" type="button" data-cert
+                  data-img="../assets/proyecto-carrito-decanters.png"
+                  data-titulo="Colombian Decanters: carrito de compras"
+                  aria-label="Ampliar captura del carrito de compras de Colombian Decanters">
+            <img src="../assets/proyecto-carrito-decanters.png" loading="lazy" alt="Captura de la página del carrito con las tarjetas de producto y el resumen de compra">
+          </button>
+          <div class="proyecto-cuerpo">
+            <h2 class="proyecto-titulo">Colombian Decanters: carrito de compras</h2>
+            <p>Módulo de carrito para una tienda web de licores, desarrollado en equipo con Git y GitHub. Mi parte fue el carrito: gestiona cantidades, subtotales y total con recálculo automático, muestra el progreso hacia el envío gratis y conserva el carrito al recargar la página.</p>
+            <p><strong>Componentes que desarrollé</strong></p>
+            <ul class="lista-detalle">
+              <li>Página del carrito: integra la vista completa y el estado de carrito vacío.</li>
+              <li>Tarjeta de producto: muestra cada artículo con controles para aumentar, disminuir o eliminar.</li>
+              <li>Barra de envío gratis: indica el monto restante con una barra de progreso dinámica.</li>
+              <li>Resumen de compra: presenta subtotal, envío estimado y total parcial.</li>
+              <li>Servicio del carrito: centraliza el estado y los cálculos con signals, y los guarda en el navegador.</li>
+            </ul>
+            <ul class="etiquetas">
+              <li>Angular 21</li>
+              <li>TypeScript</li>
+              <li>Signals</li>
+              <li>Bootstrap 5</li>
+              <li>CSS</li>
+              <li>Vitest</li>
+              <li>Git y GitHub</li>
+            </ul>
+            <div class="proyecto-enlaces">
+              <a class="enlace" href="https://github.com/juandavidrodriguezlinaresGH/colombian-decanters" target="_blank" rel="noopener">Ver repositorio del equipo</a>
+            </div>
+          </div>
+        </article>
+
         <article class="proyecto" id="simulador">
+          <button class="proyecto-vista" type="button" data-cert
+                  data-img="../assets/proyecto-simulador-energia.png"
+                  data-titulo="Simulador de consumo energético"
+                  aria-label="Ampliar captura del simulador de consumo energético">
+            <img src="../assets/proyecto-simulador-energia.png" loading="lazy" alt="Captura del simulador de consumo energético con el cálculo de ahorro mensual">
+          </button>
           <div class="proyecto-cuerpo">
             <h2 class="proyecto-titulo">Simulador de consumo energético</h2>
             <p>Sitio web con un modelo de cálculo diferencial que decide a qué hora usar la lavadora, la plancha y el microondas. Mover 30,15 kWh al mes a la madrugada ahorra unos $7.272 mensuales.</p>
@@ -74,6 +129,12 @@
         </article>
 
         <article class="proyecto" id="secudata">
+          <button class="proyecto-vista proyecto-vista-diagrama" type="button" data-cert
+                  data-img="../assets/proyecto-secudata-diagrama.png"
+                  data-titulo="SECUDATA: diagrama relacional"
+                  aria-label="Ampliar diagrama relacional de SECUDATA">
+            <img src="../assets/proyecto-secudata-diagrama.png" loading="lazy" alt="Diagrama relacional de SECUDATA con sus 11 tablas y las relaciones entre ellas">
+          </button>
           <div class="proyecto-cuerpo">
             <h2 class="proyecto-titulo">SECUDATA, base de datos de una empresa de seguridad</h2>
             <p>Base de datos relacional con 11 tablas, 15 consultas con JOIN, 5 procedimientos almacenados y 6 vistas para controlar solicitudes de servicio, personal y facturación.</p>
@@ -113,6 +174,15 @@
       <a href="../index.html">Volver al inicio</a>
     </div>
   </footer>
+
+  <dialog class="visor" id="visor" aria-label="Vista ampliada">
+    <button class="visor-cerrar" type="button" data-cerrar aria-label="Cerrar">✕</button>
+    <img id="visorImg" alt="">
+    <div class="visor-pie">
+      <p id="visorTitulo"></p>
+      <a class="enlace" id="visorPdf" href="#" target="_blank" rel="noopener">Abrir PDF original</a>
+    </div>
+  </dialog>
 
   <script src="../js/main.js"></script>
 </body>

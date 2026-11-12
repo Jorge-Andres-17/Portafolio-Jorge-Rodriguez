@@ -144,21 +144,24 @@
     var anio = document.getElementById('anio');
     if (anio) anio.textContent = new Date().getFullYear();
 
-      // ---------- Visor de certificados ----------
+    // ---------- Visor de imágenes (certificados y capturas) ----------
   var visor = document.getElementById('visor');
   var ultimoBoton = null;
 
   document.querySelectorAll('[data-cert]').forEach(function (b) {
     b.addEventListener('click', function () {
+      var imagen = b.getAttribute('data-img');
       var pdf = b.getAttribute('data-pdf');
-      if (!visor || !visor.showModal) { window.open(pdf, '_blank', 'noopener'); return; }
+      if (!visor || !visor.showModal) { window.open(pdf || imagen, '_blank', 'noopener'); return; }
 
       ultimoBoton = b;
       var img = document.getElementById('visorImg');
-      img.src = b.getAttribute('data-img');
+      var enlace = document.getElementById('visorPdf');
+      img.src = imagen;
       img.alt = b.querySelector('img').alt;
       document.getElementById('visorTitulo').textContent = b.getAttribute('data-titulo');
-      document.getElementById('visorPdf').href = pdf;
+      enlace.hidden = !pdf;
+      if (pdf) enlace.href = pdf;
       visor.showModal();
     });
   });
